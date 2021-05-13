@@ -1,0 +1,34 @@
+****************************************************************** 
+**Codigo de manejo de Maquinas virtuales de azure en power Shell**
+******************************************************************
+
+
+
+**** En el caso de que los comandos de Azure no funcionen en Power Shell , se debe instalar ****
+
+Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
+
+*** Conectar a Azure desde consola ***
+
+Connect-AzAccount
+
+*** Ver Lsita de maquinas Virtuales creadas ***
+
+Get-AzVm
+
+*** Antes de crear una maquina Virtual debemos crear un Grupo de recursos ***
+
+New-AzResourceGroup -Name powershellgrp -Location EastUS
+
+Observacion : powershellgrp es nombre del grupo recursos y EastUS es la localizacion donde creo el grupo de  recursos
+
+*** Para crer Una maquina Virtual
+
+New-AzVm -ResourceGroupName powershellgrp -Name aznewvm -Location EastUS -VirtualNetworkName "mynewVNet" -SubnetName "myNewSubnet" -SecurityGroupName "mynewNSG" -PublicIpAddressName "mypublicip" -OpenPorts 80,3389
+
+Observacion : se abre el puerto 80 para los servidores web y el 3389 para acceso remoto
+
+
+*** para para maquina Virtual ***
+
+Stop-AzVm -Name "aznewvm" -ResourceGroupName  "powershellgrp"
