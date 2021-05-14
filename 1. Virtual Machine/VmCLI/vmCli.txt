@@ -1,17 +1,23 @@
 ****************************************************************** 
-++++++Codigo de manejo de Maquinas virtuales de azure en CLI++++++
+***** Codigo de manejo de Maquinas virtuales de azure en CLI *****
 ******************************************************************
 
+***********************************************
 *** ver lista de group de recursos de azure ***
+***********************************************
 
 az group list
 
+*****************************************************************************
 *** Antes de crear una maquina Virtual debemos crear un Grupo de recursos ***
+*****************************************************************************
 
 az group create --name cligroup --location eastus
 
 Observacion : cligroup es nombre del grupo recursos y EastUS es la localizacion donde creo el grupo de  recursos
 
-*** Para crer Una maquina Virtual
+*************************************
+*** Para crer Una maquina Virtual ***
+*************************************
 
 az vm create --resource-group cligroup --name aznew2 --image win2016datacenter --admin-username jdarderes
