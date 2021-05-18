@@ -37,7 +37,7 @@ New-AzVm -ResourceGroupName powershellgrp -Name aznewvm -Location EastUS -Virtua
 Observacion : se abre el puerto 80 para los servidores web y el 3389 para acceso remoto
 
 *********************************
-*** para para maquina Virtual ***
+*** para parar maquina Virtual ***
 *********************************
 
 Stop-AzVm -Name "aznewvm" -ResourceGroupName  "powershellgrp"

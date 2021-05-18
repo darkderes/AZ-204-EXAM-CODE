@@ -1,0 +1,8 @@
+******************************************
+**** Para bajar LOG de una Aplicación ****
+******************************************
+
+az webapp log download --resource-group < nombre del grupo del recurso > --name <nombre de la aplicacion>
+
+** Se descarga archivo.zip en el directorio donde se ejecuto la aplicacion **
+
