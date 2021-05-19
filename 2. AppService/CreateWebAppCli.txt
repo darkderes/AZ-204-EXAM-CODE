@@ -1,0 +1,6 @@
+****************************************************************************
+*** Antes de crear una WebAppService debemos crear un Grupo de recursos ***
+****************************************************************************
+
+az group create --name cliwebapp --location eastus
+

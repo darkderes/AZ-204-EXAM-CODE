@@ -1,0 +1,21 @@
+*****************************************************************************
+*** Antes de crear una WebAppService debemos crear un Grupo de recursos ***
+*****************************************************************************
+
+New-AzResourceGroup -Name "powersellwebapp" -Location "EastUS"
+
+
+****************************************
+*** creación de plan Web App Service ***
+****************************************
+
+New-AzAppServicePlan -ResourceGroupName "powersellwebapp" -Name "aznewasp123" -Location "EastUS" -Tier "Free"
+
+***  -Tier hace referencia al precio del servicio a implementar ***
+
+********************************
+*** creación Web App Service ***
+********************************
+
+New-AzWebApp -ResourceGroupName "powersellwebapp" -Name "az204powersell" -Location "EastUS" -AppServicePlan "aznewasp123"
+
