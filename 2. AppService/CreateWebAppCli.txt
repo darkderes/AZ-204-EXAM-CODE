@@ -4,3 +4,14 @@
 
 az group create --name cliwebapp --location eastus
 
+****************************************
+*** creación de plan Web App Service ***
+****************************************
+
+az appservice plan create -g cliwebapp -n mynewasp321 
+
+********************************
+*** creación Web App Service ***
+********************************
+
+az webapp create -g cliwebapp -n webappcli204 -p mynewasp321
